@@ -1,11 +1,12 @@
-<html>
-    <head>
+{% extends "base.html" %}
 
-    </head>
+{% block title %}Enter the info{% endblock %}
 
-    <body>
-        <h1>
-            Hi! {{ hithere }}
-        </h1>
-    </body>
-</html>
+{% block content %}
+        <h1>Enter the words here:</h1>
+        <form action="{% url 'count' %}">
+            <textarea cols="40" rows="5" name="fulltext"></textarea>
+            <br>
+            <input type="submit" value="Count!" />
+        </form>
+{% endblock %}
