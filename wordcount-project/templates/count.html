@@ -4,12 +4,20 @@
 
 {% block content %}
     <h1>Count total</h1>
-    {{ fulltext }}
+    {{ count }}
     <br />
-    {% if fulltext|wordcount > 1 %}
-    <h2> There are {{ fulltext|wordcount }} words in your text. </h2>
-    {% elif  fulltext|wordcount == 1 %}
+    {% if count > 1 %}
+        <h2> There are {{ count }} words in your text. </h2>
+        {% for word, total in sortedwords %}
+            <b>{{ word }}</b>: {{ total }}
+            <br/>
+        {% endfor %}
+    {% elif  count == 1 %}
     <h2> There is one word in your text. </h2>
+    {% for word, total in sortedwords %}
+            <b>{{ word }}</b>: {{ total }}
+            <br/>
+        {% endfor %}
     {% else %}
     <h2> No words found </h2>
     {% endif %}
