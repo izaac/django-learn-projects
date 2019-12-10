@@ -5,6 +5,9 @@
 {% block content %}
     <h1>Count total</h1>
     {{ count }}
+    <br>
+    <a href="{% url 'home' %}">Start Over</a>
+
     <br />
     {% if count > 1 %}
         <h2> There are {{ count }} words in your text. </h2>

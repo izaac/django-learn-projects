@@ -26,3 +26,7 @@ def count(request):
             'count': len(wordlist)}
     
     return render(request, 'count.html', opts)
+
+
+def about(request):
+    return render(request, 'about.html')
