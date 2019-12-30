@@ -63,7 +63,7 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Resume</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="#">Blog</a>
           </li>
         </ul>
@@ -73,33 +73,13 @@
 
 <main role="main">
 
-  <section class="jumbotron text-center">
     <div class="container">
-      <h1>Hi, I'm Izaac </h1>
-      <p class="lead text-muted">Travel, Food and Computers.</p>
-      <p>
-        <a href="mailto:jorge.izaac@gmail.com" class="btn btn-primary my-2">Email Me</a>
-      </p>
+        <h1 class="text-center pt-3">Welcome to Izaac's Blog</h1>
+        <br>
+        <br>
+        <h2>Latest posts</h2>
+        <hr>
     </div>
-  </section>
-
-  <div class="album py-5 bg-light">
-    <div class="container">
-
-      <div class="row">
-        {% for job in jobs.all %}
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img class="card-img-top" src="{{job.image.url}}" >
-            <div class="card-body">
-              <p class="card-text">{{job.summary}}</p>
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
 
 </main>
 
