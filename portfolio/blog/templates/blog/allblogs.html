@@ -79,6 +79,13 @@
         <br>
         <h2>Latest posts</h2>
         <hr>
+
+        {% for post in blogs.all %}
+        <div>
+            <h2>{{post.title}}</h2>
+            <p>Date: {{post.pub_date}}</p>
+        </div>
+        {% endfor %}
     </div>
 
 </main>
