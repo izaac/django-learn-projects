@@ -82,8 +82,12 @@
 
         {% for post in blogs.all %}
         <div>
-            <h2>{{post.title}}</h2>
-            <p>Date: {{post.pub_date}}</p>
+            <a href="{{post.id}}"><h2>{{post.title}}</h2></a>
+            {{post.pub_date_pretty}}
+            <br>
+            <img class="img-fluid" src="{{ post.image.url }}" height=200 width=200>
+            <br>
+            <p> {{ post.summary }} ... </p>
         </div>
         {% endfor %}
     </div>
