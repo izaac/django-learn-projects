@@ -4,6 +4,12 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+pytest-django = "*"
+pytest-xdist = "*"
+pytest-html = "*"
+pytest-ordering = "*"
+pytest-repeat = "*"
+pytest-metadata = "*"
 
 [packages]
 django = ">=2.2.10"
