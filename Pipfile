@@ -6,8 +6,8 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-django = "==2.2.*"
-pillow = "*"
+django = ">=2.2.10"
+pillow = ">=6.2.2"
 psycopg2 = "*"
 
 [requires]
